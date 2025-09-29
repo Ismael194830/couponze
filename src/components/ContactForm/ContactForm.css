@@ -1,0 +1,11 @@
+.Conatact_form{
+    direction: rtl;
+}
+.Conatact_form h2 { 
+ color: #dd9933;
+ margin: 30px 0;
+ font-size: 40px;
+}
+.Conatact_form label { 
+    font-size: 20px;
+}
