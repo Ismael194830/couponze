@@ -1,0 +1,116 @@
+/* src/components/Footer.css (النسخة النهائية مع Flexbox وارتفاع القسم الأسود المعدل) */
+
+/* ------------------ الأنماط العامة للحاوية والاتجاه ------------------ */
+
+.footer-container {
+    direction: rtl; /* الاتجاه من اليمين لليسار */
+    width: 100%;
+    margin-top: 50px; 
+}
+
+/* حاوية توسيط المحتوى - تطبق على القسم العلوي والسفلي */
+.footer-content-wrapper {
+    max-width: 1200px; 
+    width: 100%;
+    margin: 0 auto;
+    padding-left: 20px; 
+    padding-right: 10px; /* المسافة البادئة من اليمين 10px */
+    box-sizing: border-box;
+}
+
+.footer-content-wrapper.main-wrapper {
+    padding-top: 40px;
+    padding-bottom: 30px;
+}
+
+/* ------------------ 1. القسم العلوي (البنفسجي الداكن) - Flexbox ------------------ */
+
+.footer-main-content {
+    background: linear-gradient(to left, #0459a5, #563d7c);
+    color: #fff;
+}
+
+/* الحاوية الرئيسية لأعمدة الروابط (Flexbox) */
+.footer-flex-container {
+    display: flex;
+    justify-content: center; 
+    gap: 150px; 
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.footer-col {
+    flex: 0 0 auto; 
+    padding: 0;
+}
+
+.column-title {
+    font-size: 22px; 
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: #FF8C00; 
+}
+
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-col li {
+    margin-bottom: 10px; 
+}
+
+.footer-col a {
+    text-decoration: none;
+    color: #E0E0E0;
+    font-size: 18px; 
+    transition: color 0.3s;
+}
+
+.footer-col a:hover {
+    color: #fff;
+}
+
+
+
+/* ------------------ 2. القسم السفلي (الأسود) ------------------ */
+
+.footer-bottom {
+    background-color: #1a1a1a; 
+    color: #BDBDBD;
+    height: 120px;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+
+}
+
+
+/* ------------------ التجاوبية (Mobile Responsiveness) ------------------ */
+
+@media (max-width: 768px) {
+    .footer-flex-container {
+        flex-direction: row; 
+        align-items: center;
+        justify-content: center;
+        gap: 30px;
+        margin-bottom: 20px;
+    }
+    
+    .copyright-text {
+        text-align: center; 
+    }
+    
+    .footer-message {
+        text-align: justify; 
+    }
+    
+    /* تعديل ارتفاع القسم الأسود في وضع التجاوب أيضاً */
+    .footer-content-wrapper.bottom-wrapper {
+        padding-top: 20px; 
+        padding-bottom: 20px;
+    }
+}
