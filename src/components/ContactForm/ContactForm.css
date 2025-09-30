@@ -1,11 +1,143 @@
-.Conatact_form{
+/* src/components/ContactForm.css */
+
+/* ------------------ الأنماط العامة للحاوية (RTL والحدود) ------------------ */
+
+.contact-container {
+    direction: rtl; /* التأكد من الاتجاه من اليمين لليسار */
+    max-width: 1000px;
+    margin: 50px auto;
+    padding: 30px; 
+    background-color: #fff;
+    
+    /* تطبيق الحدود الخارجية حول الفورم */
+    border: 1px solid #ddd; 
+    box-shadow: 0 0 10px rgba(0,0,0,0.05); 
+    border-radius: 8px;
+}
+
+/* ------------------ العنوان (اللون البرتقالي) ------------------ */
+
+.contact-header {
+    text-align: right; 
+    margin-bottom: 30px;
+    border-bottom: 2px solid #eee; 
+    padding-bottom: 10px;
+}
+
+.contact-header h2 {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+/* تطبيق اللون البرتقالي على العنوان */
+.contact-header .highlighted-title {
+    color: #FF8C00; 
+}
+
+/* ------------------ أنماط النموذج والحقول ------------------ */
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    margin-bottom: 25px;
+}
+
+.field-label {
+    display: block;
+    color: #333;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+    text-align: right; 
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+    box-sizing: border-box;
+    text-align: right; 
     direction: rtl;
 }
-.Conatact_form h2 { 
- color: #dd9933;
- margin: 30px 0;
- font-size: 40px;
+
+input:focus,
+textarea:focus {
+    border-color: #4B0082;
+    outline: none;
 }
-.Conatact_form label { 
+
+textarea {
+    resize: vertical;
+}
+
+/* ------------------ حقل الاسم المزدوج ------------------ */
+
+.name-group .input-row {
+    display: flex;
+    gap: 20px;
+}
+
+.name-group .input-wrapper {
+    flex: 1;
+    position: relative;
+}
+
+.input-hint {
+    /* وضع hint على اليسار للنص اللاتيني */
+    position: absolute;
+    bottom: -20px;
+    left: 0; 
+    color: #999;
+    font-size: 0.85rem;
+    direction: ltr; 
+}
+
+/* ------------------ زر الإرسال ------------------ */
+
+.submit-group {
+    text-align: right; /* دفع الزر إلى أقصى اليسار كما في الصورة */
+    padding-top: 15px;
+}
+
+.submit-btn {
+    background-color: #4B0082; 
+    color: white;
+    border: none;
+    padding: 10px 30px;
     font-size: 20px;
+    font-weight: 500;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+    width: 200px;
+}
+
+.submit-btn:hover {
+    background-color: #6A5ACD;
+}
+
+/* ------------------ التجاوبية ------------------ */
+
+@media (max-width: 600px) {
+    .contact-container {
+        margin: 20px auto;
+        padding: 20px;
+    }
+
+    .name-group .input-row {
+        flex-direction: column; 
+        gap: 25px; 
+    }
+    
+    .submit-group {
+        text-align: center;
+    }
 }
