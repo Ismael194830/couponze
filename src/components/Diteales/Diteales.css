@@ -1,0 +1,51 @@
+.Diteales 
+{
+    text-align: center;
+    margin-top: 50px;
+    width: 100%;
+    
+}
+.Diteales .Title 
+{
+    margin: 10px 0px;
+}
+.Diteales .Discrition
+{
+    width: 70%;
+    margin: 10px auto 40px auto;
+    font-size: 20px;
+    font-weight: 300;
+}
+
+.Diteales .Cards
+{
+    padding: 20px 40px;
+    width: max-content;
+    background-color: rgba(243, 243, 243, 0.678);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.Diteales .Cards .Card
+{
+    width: 320px;
+    
+    
+}
+.Diteales .Cards .Card img
+{
+    width: 100%;
+}
+/* .Diteales .Cards .Card img
+{
+    width: 100%;
+}
+.Diteales .Cards .Card img
+{
+    width: 100%;
+}
+.Diteales .Cards .Card img
+{
+    width: 100%;
+} */

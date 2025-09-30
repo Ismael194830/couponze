@@ -1,9 +1,12 @@
 import React from 'react'
+import VerticalFullSlider from '../../components/VerticalSlider/VerticalSlider'
+import Diteales from '../../components/Diteales/Diteales'
 
 export default function Home() {
   return (
-    <div>
-      hi
-    </div>
+    <main>
+      <VerticalFullSlider />
+      <Diteales />
+    </main>
   )
 }
