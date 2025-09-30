@@ -5,7 +5,7 @@
 .contact-container {
     direction: rtl; /* التأكد من الاتجاه من اليمين لليسار */
     max-width: 1000px;
-    margin: 50px auto;
+    margin: 150px auto;
     padding: 30px; 
     background-color: #fff;
     
@@ -13,6 +13,7 @@
     border: 1px solid #ddd; 
     box-shadow: 0 0 10px rgba(0,0,0,0.05); 
     border-radius: 8px;
+
 }
 
 /* ------------------ العنوان (اللون البرتقالي) ------------------ */

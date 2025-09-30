@@ -1,36 +1,25 @@
-/* src/components/Footer.css (النسخة النهائية مع Flexbox وارتفاع القسم الأسود المعدل) */
-
-/* ------------------ الأنماط العامة للحاوية والاتجاه ------------------ */
-
 .footer-container {
-    direction: rtl; /* الاتجاه من اليمين لليسار */
+    direction: rtl; 
     width: 100%;
-    margin-top: 50px; 
 }
-
-/* حاوية توسيط المحتوى - تطبق على القسم العلوي والسفلي */
 .footer-content-wrapper {
     max-width: 1200px; 
     width: 100%;
     margin: 0 auto;
     padding-left: 20px; 
-    padding-right: 10px; /* المسافة البادئة من اليمين 10px */
+    padding-right: 10px;
     box-sizing: border-box;
 }
-
 .footer-content-wrapper.main-wrapper {
     padding-top: 40px;
     padding-bottom: 30px;
 }
-
-/* ------------------ 1. القسم العلوي (البنفسجي الداكن) - Flexbox ------------------ */
 
 .footer-main-content {
     background: linear-gradient(to left, #0459a5, #563d7c);
     color: #fff;
 }
 
-/* الحاوية الرئيسية لأعمدة الروابط (Flexbox) */
 .footer-flex-container {
     display: flex;
     justify-content: center; 

@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 function Navbar() {
 
   const [activ , setactiv] = useState(1)
+  const [isactive , setisactive] = useState(true)
 
 
   return (
@@ -40,6 +41,21 @@ function Navbar() {
             🔍
           </button>
         </form>
+      </nav>
+      <nav className="mobileNav">
+        <div className="navbar-logo-section">
+          <a href="/" className="navbar-logo">
+            <img src="/logo.webp" alt="" />
+          </a>
+        </div>
+        <button onClick={() => setisactive(!isactive)}>
+          icon
+        </button>
+        <div className={isactive ? "sidebar" : "sidebaroff"}>
+          <button onClick={() => setisactive(!isactive)}>
+          x
+        </button>
+        </div>
       </nav>
     </header>
   );
