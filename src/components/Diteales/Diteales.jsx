@@ -48,16 +48,18 @@ export default function Diteales() {
         لتكون أول من يستفيد من أقوى التخفيضات المتوفرة.
       </p>
 
-      <div className="Cards">
-        {arr.map((card, index) => (
-          <div className="Card" key={index}>
-            <img src={`/${card.img}`} alt="" className="" />
-            <div class="triangle-divider"></div>
-            <h3>{card.logo}</h3>
-            <span>{card.title}</span>
-            <p>{card.discrip}</p>
-          </div>
-        ))}
+      <div className="fatherOf">
+        <div className="Cards">
+          {arr.map((card, index) => (
+            <div className="Card" key={index}>
+              <img src={`/${card.img}`} alt="" className="" />
+              <div class="triangle-divider"></div>
+              <h3>{card.logo}</h3>
+              <span>{card.title}</span>
+              <p>{card.discrip}</p>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );

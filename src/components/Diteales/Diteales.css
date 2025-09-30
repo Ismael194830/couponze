@@ -3,7 +3,6 @@
     text-align: center;
     margin-top: 50px;
     width: 100%;
-    
 }
 .Diteales .Title 
 {
@@ -16,7 +15,23 @@
     font-size: 20px;
     font-weight: 300;
 }
-
+.Diteales .fatherOf
+{
+    width: 100;
+    overflow-x: scroll;
+}
+.Diteales .fatherOf::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+.Diteales .fatherOf::-webkit-scrollbar-track {
+  background: #ffffff;
+  border-radius: 10px;
+}
+.Diteales .fatherOf::-webkit-scrollbar-thumb {
+  background: linear-gradient(to left , #0459a5, #563d7c);
+  border-radius: 10px;
+}
 .Diteales .Cards
 {
     padding: 20px 40px;
@@ -25,27 +40,48 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-
 }
 .Diteales .Cards .Card
 {
-    width: 320px;
-    
-    
+    width: 330px;
+    margin: 10px 20px 30px 20px;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 8px .6px rgb(182, 181, 181);  
+    transition: .4s;
+}
+.Diteales .Cards .Card:hover
+{
+    box-shadow: 0px 0px 8px .6px #563d7cea;
+    cursor: pointer;
+    transform: scale(1.025);
+    transition: .4s;
 }
 .Diteales .Cards .Card img
 {
     width: 100%;
+    border-radius: 8px;
 }
-/* .Diteales .Cards .Card img
+.Diteales .Cards .Card h3
 {
-    width: 100%;
+    background-color: #563d7c;
+    width: max-content;
+    padding: 5px 12px;
+    margin: 10px auto;
+    border-radius: 20px;
+    color: #fff;
 }
-.Diteales .Cards .Card img
+
+.Diteales .Cards .Card span
 {
-    width: 100%;
+    color: #eba000;
+    font-weight: 600;
+    padding-top: 10px;
 }
-.Diteales .Cards .Card img
+
+.Diteales .Cards .Card p
 {
-    width: 100%;
-} */
+    font-weight: 400;
+    margin-top: 10px;
+} 
+   
