@@ -7,6 +7,8 @@ import Home from './Pagas/Home/Home'
 import Product from './Pagas/product/product'
 import ConatctUs from './Pagas/contactUs/ConatctUs'
 import Footer from './components/Footer/Footer'
+import CouponCard from './components/CouponCard/CouponCard'
+
 
 function App() {
   // هنا سنضع منطق جلب الكوبونات وعرضها
@@ -22,6 +24,7 @@ function App() {
       <Route path='/Product' element={<Product/>}/>
       <Route path='/ConatctUs' element={<ConatctUs />}/>
      </Routes>
+      <CouponCard/>
       <Footer/>
       
     </>
