@@ -4,6 +4,9 @@ import "swiper/css";
 import "./VerticalSlider.css";
 import { useNavigate } from "react-router-dom";
 import { useRef } from "react";
+import { FaArrowUp   } from "react-icons/fa";
+import { FaArrowDown } from "react-icons/fa";
+
 
 export default function VerticalSlider() {
   const navigate = useNavigate();
@@ -59,8 +62,12 @@ export default function VerticalSlider() {
 
       {/* أزرار التحكم */}
       <div className="nav-buttons">
-        <button onClick={() => swiperRef.current?.slidePrev()}>top</button>
-        <button onClick={() => swiperRef.current?.slideNext()}>bottom</button>
+        <button onClick={() => swiperRef.current?.slidePrev()}>
+          <FaArrowUp />
+        </button>
+        <button onClick={() => swiperRef.current?.slideNext()}>
+          <FaArrowDown />
+        </button>
       </div>
     </div>
   );

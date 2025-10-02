@@ -54,6 +54,7 @@
   align-items: center;
   justify-content: space-between;
   gap: 5px;
+  padding: 0;
 }
 
 .navbar-links ul li {
@@ -73,7 +74,6 @@
 .navbar-search-section {
   position: relative;
 }
-
 .navbar-search-section .search-input {
   border-radius: 25px;
   background-color: #ffffff18;
@@ -107,5 +107,6 @@
   .mobileNav
   {
     display: flex;
+    padding: 0 10px;
   }
 }
