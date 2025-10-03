@@ -1,0 +1,100 @@
+.Continar{ 
+    height: 450px;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+
+    margin: auto;
+      /* *** ابدأ الإضافة هنا *** */
+    position: relative; /* لتموضع العناصر الوهمية داخله */
+    overflow: hidden;   /* لإخفاء نصف الدائرة خارج الحدود */
+    background-color: white; /* تأكد أن خلفية الكرت بيضاء */
+    box-shadow: 0 4px 12px rgba(214, 206, 206, 0.5);
+    margin-bottom: 20px ;
+    border-radius: 20px;
+}
+/* *** أضف هذا الكود بالكامل هنا *** */
+
+.Continar::before,
+.Continar::after {
+    content: ''; 
+    position: absolute; 
+    top: 50%; 
+    transform: translateY(-50%); /* لتوسيط الدائرة عمودياً */
+    
+    width: 30px; 
+    height: 30px; 
+    
+    /* لون الخلفية يجب أن يطابق لون خلفية الصفحة الخارجية */
+    background-color: #f0f0f0; 
+    border: 1px solid gray; /* يفضل أن يكون نفس لون حدود الكرت */
+    border-radius: 50%; 
+    z-index: 2; 
+}
+
+/* تحديد موقع الدائرة اليمنى */
+.Continar::before {
+    right: -15px; 
+}
+
+/* تحديد موقع الدائرة اليسرى */
+.Continar::after {
+    left: -15px; 
+}
+/* *************************************** */
+
+.img-logo { 
+      display: flex; /* 👈 هنا المفتاح */
+    flex-direction: column; /* لجعل العناصر تحت بعض */
+    align-items: center; 
+}
+   .Continar .img { 
+    width: 100%;
+    height: 130px;
+}
+
+.Continar .logo { 
+    height: 30px;
+    margin: 0px auto;
+    border: 2px solid blue;
+    border-radius: 15px;
+    margin-top: -10px;
+
+   
+}
+.contant { 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+
+}
+.contant button { 
+  width: 200px;
+  height: 40px;
+  padding: 10px;
+background-color: #2780e3;
+      color: white;
+    font-size: large;
+}
+.Continar p {
+    text-align: center;
+}
+.contant .expaiard { 
+    background-color: green;
+    text-align: center;
+    font-size: 14px;
+    color: white;
+    padding: 2px;
+    border-radius: 5px;
+}
+.locatin { 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 16px;
+    color: orange;
+}
