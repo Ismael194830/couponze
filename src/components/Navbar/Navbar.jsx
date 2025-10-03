@@ -1,13 +1,32 @@
 import { useState } from "react";
 import "./Navbar.css";
 import { Link } from "react-router-dom";
+// 🌟 استيرادات Redux والـ Hooks الجديدة 🌟
+import { useSelector, useDispatch } from 'react-redux';
+import { selectIsAuthenticated, openAuthModal } from '../../redux/authSlice';
+import { useLogout } from '../../hooks/useLogout';
+import { LuLogIn , LuLogOut } from "react-icons/lu";
+import { IoPersonCircleSharp } from "react-icons/io5";
 
 function Navbar() {
 
   const [activ , setactiv] = useState(1)
   const [isactive , setisactive] = useState(false)
-
   const [fillter , setfillter] = useState("")
+
+  // 1. 🌟 قراءة حالة المصادقة من Redux Store
+  const isAuthenticated = useSelector(selectIsAuthenticated);
+  
+  // 2. 🌟 استدعاء Hook الـ Dispatch لفتح النافذة المنبثقة
+  const dispatch = useDispatch();
+
+  // 3. 🌟 استدعاء Hook تسجيل الخروج
+  const handleLogout = useLogout(); 
+
+  // دالة لفتح نافذة المصادقة المنبثقة
+  const handleLoginClick = () => {
+    dispatch(openAuthModal());
+  };
 
   // Search
   return (
@@ -32,7 +51,8 @@ function Navbar() {
           </ul>
         </div>
 
-        <form className="navbar-search-section">
+        <div className="SerthandDest">
+          <form className="navbar-search-section">
           <input
             type="text"
             placeholder="البحث"
@@ -46,6 +66,31 @@ function Navbar() {
           </button>
           </Link>
         </form>
+        <Link to={'/profile'}>
+        <IoPersonCircleSharp />
+        </Link>
+
+        {/* 🌟 4. منطق التبديل بين زر الدخول وزر الخروج 🌟 */}
+        {isAuthenticated ? (
+          // إذا كان مسجل دخول: إظهار زر تسجيل الخروج
+          <button 
+            className="Login logout-btn" 
+            onClick={handleLogout} // 👈 ربط بزر تسجيل الخروج
+            title="تسجيل الخروج"
+          >
+            <LuLogOut />
+          </button>
+        ) : (
+          // إذا كان ضيف: إظهار زر تسجيل الدخول (Login)
+          <button 
+            className="Login login-btn" 
+            onClick={handleLoginClick} // 👈 ربط بزر فتح النافذة المنبثقة
+            title="تسجيل الدخول / إنشاء حساب"
+          >
+            <LuLogIn />
+          </button>
+        )}
+        </div>
       </nav>
       <nav className="mobileNav">
         <div className="navbar-logo-section">

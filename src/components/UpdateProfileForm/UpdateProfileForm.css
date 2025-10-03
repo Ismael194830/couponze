@@ -1,0 +1,14 @@
+.BackColor
+{
+      background: linear-gradient(to left, #0459a5, #563d7c);
+      color: #fff;
+}
+.BackColor input
+{
+    background-color: #ffffff81;
+}
+
+.BackColor button
+{
+    border: none;
+}
