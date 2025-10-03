@@ -1,0 +1,78 @@
+.singleCopone
+{
+    width: 94%;
+    margin-top: 100px;
+    height: 80vh;
+    border: 1px solid orange;
+    margin: 120px auto 20px auto;
+    direction: rtl;
+    border-radius: 10px;
+}
+.singleCopone img
+{
+    width: 100%;
+    height: 60%;
+    padding: 20px;
+    border-radius: 30px;
+}
+
+.singleCopone .BadyCopon
+{
+    display: flex;
+    justify-content: space-between;
+}
+.singleCopone .BadyCopon .Info h3
+{
+    color: orange;
+    margin: 20px;
+    font-size: 30px;
+    font-weight: 600;
+}
+.singleCopone .BadyCopon .Info p
+{
+    margin: 20px;
+    font-weight: 600;  
+    font-size: 18px;
+    width: 450px;
+}
+.singleCopone .BadyCopon .Info .Points
+{
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+    margin: 20px;
+    font-weight: 600;  
+    gap: 8px;
+}
+.singleCopone .BadyCopon .Info .Points span:nth-child(3)
+{
+    color: #fff;
+    background-color: green;
+    padding: 2px 5px;
+    border-radius: 6px;
+    width: max-content;
+}
+
+.singleCopone .BadyCopon .Barcode
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 450px;
+}
+
+.singleCopone .BadyCopon .Barcode span
+{
+    width: 100%;
+}
+
+.singleCopone .BadyCopon .Barcode button
+{
+    width: 90%;
+    background-color: orange;
+    color: #fff;
+    border: 2px dashed #fff;
+    outline: 2px solid orange;
+    margin: 20px;
+    margin-top: 35px;
+}

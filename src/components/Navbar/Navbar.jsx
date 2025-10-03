@@ -5,9 +5,11 @@ import { Link } from "react-router-dom";
 function Navbar() {
 
   const [activ , setactiv] = useState(1)
-  const [isactive , setisactive] = useState(true)
+  const [isactive , setisactive] = useState(false)
 
+  const [fillter , setfillter] = useState("")
 
+  // Search
   return (
     <header className="navbar-container">
       <nav className="navbar-content">
@@ -36,10 +38,13 @@ function Navbar() {
             placeholder="البحث"
             className="search-input"
             maxLength={15}
+            onChange={(e) => setfillter(e.target.value)}
           />
-          <button type="submit" className="search-icon" aria-label="بحث">
+          <Link to={`/Search/${fillter}`}>
+          <button type="submit" className="search-icon" aria-label="بحث" > 
             🔍
           </button>
+          </Link>
         </form>
       </nav>
       <nav className="mobileNav">
