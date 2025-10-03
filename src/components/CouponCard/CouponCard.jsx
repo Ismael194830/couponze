@@ -1,4 +1,3 @@
-import React from "react";
 import './CouponCard.css'
 
 export default function CouponCard() {
